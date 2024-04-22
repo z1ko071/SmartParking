@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SmartParking</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logo">logo</string>
+    <string name="login_to_your_naccount">Login to your \nAccount</string>
+    <string name="save">Save</string>
+    <string name="fill_your_profile">Edit Your Profile</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="payment">Payment</string>
+    <string name="help">Help</string>
+    <string name="logout">Logout</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+</resources>

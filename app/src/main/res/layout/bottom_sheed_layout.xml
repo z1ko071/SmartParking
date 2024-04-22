@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheed_dialog_bg">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="40dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view">
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageDialog"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:scaleType="centerCrop"
+            android:src="#56969696"
+            app:layout_constraintDimensionRatio="2:1.2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/raundedImageView" />
+
+        <TextView
+            android:id="@+id/titleDialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Parking Title"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageDialog"
+            app:layout_constraintStart_toStartOf="@+id/imageDialog"
+            app:layout_constraintTop_toBottomOf="@+id/imageDialog" />
+
+        <TextView
+            android:id="@+id/phoneDialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Tel: +998909405577"
+            android:textColor="#727272"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageDialog"
+            app:layout_constraintStart_toStartOf="@+id/imageDialog"
+            app:layout_constraintTop_toBottomOf="@+id/titleDialog" />
+
+        <TextView
+            android:id="@+id/numberDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Rating "
+            app:layout_constraintStart_toStartOf="@+id/phoneDialog"
+            app:layout_constraintTop_toBottomOf="@+id/phoneDialog" />
+
+        <RatingBar
+            android:id="@+id/ratingDialog"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:numStars="5"
+            android:rating="2"
+            android:theme="@style/RatingBar"
+            app:layout_constraintBottom_toBottomOf="@+id/numberDialog"
+            app:layout_constraintStart_toEndOf="@+id/numberDialog"
+            app:layout_constraintTop_toTopOf="@+id/numberDialog" />
+
+        <TextView
+            android:id="@+id/carCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Parking car count : 20/50"
+            app:layout_constraintStart_toStartOf="@+id/numberDialog"
+            app:layout_constraintTop_toBottomOf="@+id/ratingDialog" />
+
+        <TextView
+            android:id="@+id/elctrocarCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="Parking electro car count : 20/50"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/numberDialog"
+            app:layout_constraintTop_toBottomOf="@+id/carCount" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+
+        <RadioButton
+            android:id="@+id/normal"
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/bottom_car_check_background"
+            android:button="@null"
+            android:checked="true"
+            android:drawableStart="@drawable/ic_car"
+            android:fontFamily="@font/urbanist_bold"
+            android:gravity="center"
+            android:padding="40dp"
+            android:text="Normal" />
+
+        <RadioButton
+            android:id="@+id/electro"
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/bottom_car_check_background"
+            android:button="@null"
+            android:drawableStart="@drawable/ic_electrocar"
+            android:fontFamily="@font/urbanist_bold"
+            android:gravity="center"
+            android:padding="40dp"
+            android:text="Electro" />
+
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/enter"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/go_to_shape"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="Enter to Parking"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <FrameLayout
+        android:id="@+id/loader"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#fff"
+        android:elevation="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/button_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

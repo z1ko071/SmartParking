@@ -1,0 +1,26 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SmartParking" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
+
+    <style name="Theme.SmartParking" parent="Base.Theme.SmartParking" />
+
+    <style name="raundedImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+
+    <style name="RatingBar">
+        <item name="colorControlActivated">#ffc107</item>
+        <item name="colorControlNormal">#6e6e6e</item>
+    </style>
+
+    <style name="RoundImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+</resources>

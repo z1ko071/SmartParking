@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.boarding.BoardingScreen">
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+        android:id="@+id/dots_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        app:dotsColor="@color/gray"
+        app:dotsCornerRadius="10dp"
+        app:dotsSize="10dp"
+        app:dotsSpacing="4dp"
+        app:dotsWidthFactor="2.8"
+        app:progressMode="true"
+        app:selectedDotColor="@color/button_color" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_btn"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="30dp"
+        android:background="@drawable/button_background"
+        android:elevation="100dp"
+        android:fontFamily="@font/urbanist_bold"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+
+</LinearLayout>
